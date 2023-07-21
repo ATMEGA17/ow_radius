@@ -20,53 +20,9 @@ if sys.argv[-1] == 'publish':
 
 
 setup(
-    name='openwisp-radius',
-    #version=get_version(),
-    license='GPL3',
-    author='OpenWISP',
-    author_email='support@openwisp.io',
-    description='OpenWISP Radius',
-    long_description=open('README.rst').read(),
-    #url='https://openwisp.org',
-    #download_url='https://github.com/openwisp/openwisp-radius/releases',
     platforms=['Platform Independent'],
     keywords=['django', 'freeradius', 'networking', 'openwisp'],
     packages=find_packages(exclude=['tests*', 'docs*']),
     include_package_data=True,
     zip_safe=False,
-    install_requires=[
-        (
-            'openwisp-users '
-            '@ https://github.com/ATMEGA17/ow_users/tarball/master'
-            'master'
-        ),
-        (
-            'openwisp-utils '
-            '@ https://github.com/ATMEGA17/ow_utils/tarball/master'
-        ),
-        'passlib~=1.7.1',
-        'djangorestframework-link-header-pagination~=0.1.1',
-        'weasyprint~=59.0',
-        'dj-rest-auth~=4.0.1',
-        'django-sendsms~=0.5.0',
-        'jsonfield~=3.1.0',
-        'django-private-storage~=3.1.0',
-        'django-ipware~=5.0.0',
-        'pyrad~=2.4',
-    ],
-    extras_require={
-        'saml': ['djangosaml2~=1.5.0'],
-        'openvpn_status': ['openvpn-status~=0.2.1'],
-    },
-    classifiers=[
-        'Development Status :: 3 - Alpha',
-        'Environment :: Web Environment',
-        'Topic :: Internet :: WWW/HTTP',
-        'Topic :: System :: Networking',
-        'Intended Audience :: Developers',
-        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
-        'Operating System :: OS Independent',
-        'Framework :: Django',
-        'Programming Language :: Python :: 3',
-    ],
 )
